@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/system";
 import {
   Typography,
@@ -22,7 +22,7 @@ import smartClassImg3 from "../../images/projectPageImages/smart-Classroom/smart
 import smartClassImg4 from "../../images/projectPageImages/smart-Classroom/img 2.svg";
 
 import smartclassHardware from "../../images/projectPageImages/smart-Classroom/smartclassHardware.png";
-
+import smartclassMobHardware from "../../images/projectPageImages/smart-Classroom/smartClassHardwareMob.jpg";
 
 import ReactPlayer from "react-player";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -137,29 +137,30 @@ export default function SmartClass() {
 
   const cardStyle = (theme) => ({
     width: "100%",
-    [theme.breakpoints.only('sm')]: {
-      height: 830, marginTop: 3, 
-   },
-    [theme.breakpoints.between('sm','md')]: {
-       height: 780, marginTop: 3, 
+    [theme.breakpoints.only("sm")]: {
+      height: 830,
+      marginTop: 3,
     },
-    [theme.breakpoints.only('md')]: {
-      height: 700, 
-   },
-    [theme.breakpoints.up('md')]: {
-       height: 700,
+    [theme.breakpoints.between("sm", "md")]: {
+      height: 780,
+      marginTop: 3,
+    },
+    [theme.breakpoints.only("md")]: {
+      height: 700,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 700,
     },
 
-    [theme.breakpoints.up('lg')]: {
-   height: 830
+    [theme.breakpoints.up("lg")]: {
+      height: 830,
     },
-    [theme.breakpoints.up('xl')]: {
-     height: 830
-    }
-
-
-  })
-  const smartClassProj = ["86 Smart Classrooms in Chennai Corporation Schools through ELCOT.",
+    [theme.breakpoints.up("xl")]: {
+      height: 830,
+    },
+  });
+  const smartClassProj = [
+    "86 Smart Classrooms in Chennai Corporation Schools through ELCOT.",
 
     "171 Adi Dravidar & Tribal Welfare Department schools through ELCOT.",
     "25 Smart classrooms through Tirunelveli Corporations.",
@@ -168,8 +169,8 @@ export default function SmartClass() {
     "4 Smart classrooms through ELCOT by Coimbatore Corporations.",
     "38 Smart classrooms through Government aided Schools ",
     "1 Government Children Home for Boys, Ranipet through ELCOT",
-    "Netcom e-Smart Class Rooms more than  300 Government and Corporation Schools through ELCOT in BOOT model."]
-  
+    "Netcom e-Smart Class Rooms more than  300 Government and Corporation Schools through ELCOT in BOOT model.",
+  ];
 
   const smartClassHighProj = [
     "The content installed in the server is Samacheer based syllabus for the Std. 6 to 12 with diagrams and animations for the easy understanding of students.",
@@ -180,7 +181,15 @@ export default function SmartClass() {
     "We take full credit as we have successfully implemented these projects within the stipulated time frame by the Government for the beneficial of student community.",
   ];
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+  };
+
   useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+
     window.scrollTo(0, 0);
   }, []);
 
@@ -506,15 +515,30 @@ export default function SmartClass() {
 
       <div style={{ width: "100%", marginTop: "5%" }}>
         {/* 67% middle of page */}
-        <DivStyle1 >
-          <Typography variant="h4" style={{ display: "flex", margin: "0 auto", color: Colors.MAIN_COLOR, fontWeight:"bold" }} > Smart Class Hardwares </Typography>
+        <DivStyle1>
+          <Typography
+            variant="h4"
+            style={{
+              display: "flex",
+              margin: "0 auto",
+              color: Colors.MAIN_COLOR,
+              fontWeight: "bold",
+            }}
+          >
+            {" "}
+            Smart Class Hardwares{" "}
+          </Typography>
         </DivStyle1>
       </div>
 
-       {/* Full vertical page */}
-       <div style={{ width: "100%", marginTop: 25, marginBottom: 50 }}>
-        <DivStyle1>
-          <img src={smartclassHardware} width="100%" height="500px" />
+      {/* Full vertical page */}
+      <div style={{ width: "100%", marginTop: 20, marginBottom: 20 }}>
+        <DivStyle1 style={{ display: "flex", justifyContent: "center" }}>
+          <img
+            src={width < 800 ? smartclassMobHardware : smartclassHardware}
+            width="100%"
+            height={width < 800 ? "350px" : "500px"}
+          />
         </DivStyle1>
       </div>
 
@@ -645,7 +669,12 @@ export default function SmartClass() {
         <DivStyle4>
           <Typography
             variant="h4"
-            style={{ marginTop: 20, fontWeight: "600", fontFamily: "nunito",color:Colors.MAIN_COLOR }}
+            style={{
+              marginTop: 20,
+              fontWeight: "600",
+              fontFamily: "nunito",
+              color: Colors.MAIN_COLOR,
+            }}
           >
             Need this Product? Contact us:
           </Typography>
@@ -675,8 +704,15 @@ export default function SmartClass() {
               info@ncpli.com
             </span>{" "}
             or call
-          <span style={{ cursor: "pointer", color: " #3B7CFE" }} onClick={() => { window.open("tel:753886286", "_self"); }} > +91 753 886 286 </span>
-         
+            <span
+              style={{ cursor: "pointer", color: " #3B7CFE" }}
+              onClick={() => {
+                window.open("tel:753886286", "_self");
+              }}
+            >
+              {" "}
+              +91 753 886 286{" "}
+            </span>
           </Typography>
           <Button
             style={{
