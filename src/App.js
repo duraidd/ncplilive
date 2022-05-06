@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { HashRouter, Route, Routes  } from "react-router-dom";
+import { BrowserRouter, rRouter , Route, Routes  } from "react-router-dom";
 import React, { useEffect } from "react";
 
 import Home from "./components/Home";
@@ -49,7 +49,7 @@ function App() {
   });
   return (
     <>
-      <HashRouter>
+      <BrowserRouter basename={window.location.pathname || ''} >
         <Routes>
           <Route exact path="/smart-class" element={<SmartClass />}></Route>
           <Route exact path="/netcom-digital-contents" element={<NetcomDigitalContents />}></Route>
@@ -89,7 +89,7 @@ function App() {
           <Route exact path="/short-film" element={<ShortFilm />} />
 
         </Routes>
-      </HashRouter>
+      </BrowserRouter >
     </>
   );
 }
