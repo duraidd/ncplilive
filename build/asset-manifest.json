@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/exampleWebsite/static/css/main.e20f9ca8.css",
-    "main.js": "/exampleWebsite/static/js/main.865d8a2a.js",
+    "main.js": "/exampleWebsite/static/js/main.1d126c66.js",
     "static/js/787.b7474013.chunk.js": "/exampleWebsite/static/js/787.b7474013.chunk.js",
     "static/media/skill2.jpg": "/exampleWebsite/static/media/skill2.3120c542079bee7031ac.jpg",
     "static/media/smart_class_2.svg": "/exampleWebsite/static/media/smart_class_2.10ada794166011d6f564c9b2fbc41bcd.svg",
@@ -10,6 +10,7 @@
     "static/media/ict.jpg": "/exampleWebsite/static/media/ict.bdfd23a3836e02903d33.jpg",
     "static/media/eContentDevelopment.png": "/exampleWebsite/static/media/eContentDevelopment.56e7051a2ba03d1987a5.png",
     "static/media/lab1.svg": "/exampleWebsite/static/media/lab1.e7bd83e01e91400dad54f35a48ae444d.svg",
+    "static/media/smartClassHardwareMob.jpg": "/exampleWebsite/static/media/smartClassHardwareMob.9646d489c33c0743d6a3.jpg",
     "static/media/smart_class.svg": "/exampleWebsite/static/media/smart_class.ba5a4008263dd6cc1ae4cb7625e6ccd3.svg",
     "static/media/lab3.svg": "/exampleWebsite/static/media/lab3.7683946be21857d2a9158b16a62c9f2c.svg",
     "static/media/lab2.svg": "/exampleWebsite/static/media/lab2.da54458afec5e2ee2f0dc9627cb271f1.svg",
@@ -194,11 +195,11 @@
     "static/media/ic_y.svg": "/exampleWebsite/static/media/ic_y.46d72ab5679175057696b7ea4818c8f8.svg",
     "static/media/ic_f.svg": "/exampleWebsite/static/media/ic_f.377c0bf7fb12b1972b9f2dd920525ef3.svg",
     "main.e20f9ca8.css.map": "/exampleWebsite/static/css/main.e20f9ca8.css.map",
-    "main.865d8a2a.js.map": "/exampleWebsite/static/js/main.865d8a2a.js.map",
+    "main.1d126c66.js.map": "/exampleWebsite/static/js/main.1d126c66.js.map",
     "787.b7474013.chunk.js.map": "/exampleWebsite/static/js/787.b7474013.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e20f9ca8.css",
-    "static/js/main.865d8a2a.js"
+    "static/js/main.1d126c66.js"
   ]
 }
